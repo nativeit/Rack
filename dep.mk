@@ -5,7 +5,8 @@ DEP_LOCAL ?= dep
 $(shell mkdir -p $(DEP_LOCAL))
 DEP_PATH := $(abspath $(DEP_LOCAL))
 
-DEP_FLAGS += -g -O3 -march=nocona
+# 21-11-05 Troubleshooting error on M1 Mac clang: error: the clang compiler does not support '-march=nocona'
+# DEP_FLAGS += -g -O3 -march=nocona
 
 ifeq ($(ARCH), mac)
 	DEP_MAC_SDK_FLAGS := -mmacosx-version-min=10.7

@@ -12,7 +12,8 @@ FLAGS += -MMD -MP
 # Debugger symbols. These are removed with `strip`.
 FLAGS += -g
 # Optimization
-FLAGS += -O3 -march=nocona -funsafe-math-optimizations
+# FLAGS += -O3 -march=nocona -funsafe-math-optimizations # 2021-11-05 Troubleshooting error on M1 Mac
+
 # Warnings
 FLAGS += -Wall -Wextra -Wno-unused-parameter
 # C++ standard
